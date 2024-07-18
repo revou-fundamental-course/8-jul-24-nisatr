@@ -4,10 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <!-- Title -->
+    <header class="main-title">
+        <h1>BMI Calculator</h1>
+    </header>
     
+    <main>
+        <!-- LEFT PANEL-->
+        <section class="main-content">
+            <!-- main article (explain BMI) -->
+            <article>
+                <p>BMI, or body mass index, measures your total body fat based on your weight and height. 
+                    It gives you a clue to your risk for weight-related health problems. 
+                    Let's check your BMI by filling out this form below!</p>
+            </article>
+
+            <!-- form field -->
+            <section class="form-container">
+                <form>
+                    <label>Gender</label>
+                    <div class="gender">
+                        <input type="radio" id="select-man" name="gender" value="Man"></input>
+                        <label for="select-man">Man</label>
+                        <input type="radio" id="select-woman" name="gender" value="Woman"></input>
+                        <label for="select-woman">Woman</label>
+                    </div>
+                    <div>
+                        <label for="input-age">Age (year)</label>
+                        <input type="number" id="input-age" name="age"></input>
+                    </div>
+                    <div>
+                        <label for="input-weight">Weight* (Kg)</label>
+                        <input type="number" id="input-weight" name="weight"></input>
+                    </div>
+                    <div>
+                        <label for="input-height">Height* (cm)</label>
+                        <input type="number" id="input-height" name="height"></input>
+                    </div>
+                    <div>
+                        <button class="button calculate" id="calculate-bmi">Calculate</button>
+                        <button class="button reset" id="reset">Reset</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- form article (explain form/calculator) -->
+            <section>
+                <header>
+                    <h4>What this calculator can do:</h4>
+                </header>
+
+                <Article>
+                    <ol>
+                        <li>Calculates body weight</li>
+                        <li>Determines the ideal weight category or not</li>
+                        <li>Preparing a weight loss program</li>
+                    </ol>
+
+                    <p>The score you get is valid for most people over age 18 with the exceptions of overestimating
+                        body fat in those with a muscular build like an athlete and underestimating fat in those who
+                        have lost muscle.</p>
+
+                    <p>This calculator will give you an idea of how your weight compares to typical values.
+                        Body mass index (BMI) is calculated by your weight (Kg) divided by the square of your 
+                        height (M), or BMI = Kg/M<sup>2</sup>.</p>
+                </Article>
+            </section>
+        </section>
+
+
+        <!-- RIGHT PANEL-->
+        <Section class="main-content">
+            <!-- result article (left)-->
+            <article>
+                <header>
+                    <h2>Result</h2>
+                </header>
+
+                <!-- result section -->
+                <section class="result-container">
+                    <p>Your Result:</p>
+                    <h1 id="bmi-result">0.0</h1>
+                    <p id="bmi-category"></p>
+                    <button>Download BMI Result</button>
+                </section>
+
+                <!-- article BMI result explanation and recomendation-->
+                <Article class="result-explanation">
+                    <p id="bmi-explanation"></p>
+                    <button>Doctor consultation via App</button>
+                </Article>
+
+                <!-- table bmi category -->
+                <section>
+                    <header>
+                        <h4>BMI Categories</h4>
+                    </header>
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>BMI Range</th>
+                        </tr>
+                        <tr>
+                            <td>Underweight</td>
+                            <td>Less than 18.5</td>
+                        </tr>
+                        <tr>
+                            <td>Normal weight</td>
+                            <td>18.5 - 24.9</td>
+                        </tr>
+                        <tr>
+                            <td>Overweight</td>
+                            <td>25 - 29.9</td>
+                        </tr>
+                        <tr>
+                            <td>Obesity</td>
+                            <td>30 and above</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- general information -->
+                 <article>
+                    <p>BMI does not fully represent a comprehensive diagnosis of a person's health and risk of disease. 
+                        You need further consultation regarding your risks and concerns related to your weight.</p>
+
+                    <!-- download app section -->
+                    <section class="download-app">
+                        <p>Download Aplikasi</p>
+                        <img src="https://w7.pngwing.com/pngs/462/120/png-transparent-iphone-google-play-android-get-started-now-button-electronics-text-logo.png" alt="Google Play Store" class="app-badge">
+                        <img src="https://1000logos.net/wp-content/uploads/2020/08/apple-app-store-logo-500x173.jpg" alt="Apple App Store" class="app-badge">
+                    </section>
+                 </article>
+            </article>
+        </Section>
+    </main>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
